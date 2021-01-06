@@ -7,7 +7,7 @@ public class AuthorizationClass {
     public static void entrance() {
         Scanner scanner = new Scanner(System.in);
         int choise, pin, validPin;
-        long cardNumber, validcardNumber;
+        long cardNumber, validCardNumber;
         String login, validLogin, password, validPassword;
         while (true) {
             System.out.println("For Client enter emulation ,Please Enter -1");
@@ -19,7 +19,7 @@ public class AuthorizationClass {
                 case 1 -> {
                     System.out.println("Please enter valid card number :");
                     cardNumber = scanner.nextLong();
-                    validcardNumber = AuthorizationClasses.InsertCardForm.validCard(cardNumber);
+                    validCardNumber = AuthorizationClasses.InsertCardForm.validCard(cardNumber);
                     System.out.println("Please enter valid PIN number :");
                     pin = scanner.nextInt();
                     validPin = AuthorizationClasses.EnterPinForm.validPin(pin);
@@ -39,4 +39,6 @@ public class AuthorizationClass {
             }
         }
     }
+    public static void clientCheckingInDb(){}
+    public static void workerCheckingInDb(){}
 }
