@@ -2,9 +2,8 @@ package AuthorizationClasses;
 
 import lombok.Getter;
 import lombok.Setter;
-
-@Getter
 @Setter
+@Getter
 public class Client {
     long clientCardNumber;
     int pin,balance;

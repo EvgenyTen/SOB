@@ -41,9 +41,9 @@ public class AuthorizationClass {
         }
     }
     public static void clientCheckingInDb(){
-        File clientsDb=new File("src/main/resources/clientsDb");
+        File clientsDb=new File("src/main/resources/clientsDb.txt");
     }
     public static void workerCheckingInDb(){
-        File workersDb=new File("src/main/resources/workersDb");
+        File workersDb=new File("src/main/resources/workersDb.txt");
     }
 }
