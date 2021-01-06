@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Start {
     public static void main(String [] args){
         Scanner scanner=new Scanner(System.in);
-        int choise;
+        int choise,pin,validPin;;
         long cardNumber,validcardNumber;
-        int pin,validPin;
+        String login,validLogin,password,validPassword;
         while(true){
             System.out.println("For Client enter emulation ,Please Enter -1");
             System.out.println("For Worker enter emulation ,Please Enter -2");
@@ -21,7 +21,14 @@ public class Start {
                     pin = scanner.nextInt();
                     validPin=AuthorizationClasses.EnterPinForm.validPin(pin);
                 }
-                case 2 -> System.out.println("Please enter valid worker login :");
+                case 2 ->{
+                    System.out.println("Please enter valid worker login :");
+                    Scanner loginObj=new Scanner(System.in);
+                    login=loginObj.nextLine();
+                    System.out.println("Please enter valid password :");
+                    Scanner passwordObj=new Scanner(System.in);
+                    password=loginObj.nextLine();
+                }
                 case 3 -> System.exit(0);
                 default -> System.out.println("Wrong entry !!!");
             }
