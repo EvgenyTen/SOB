@@ -1,4 +1,4 @@
-package AuthorizationClasses;
+package model;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,9 +15,6 @@ public class Worker {
 
     @Override
     public String toString() {
-        return "Worker{" +
-                "workerLogin='" + workerLogin + '\'' +
-                ", workerPassword='" + workerPassword + '\'' +
-                '}';
+        return  workerLogin + " " +workerPassword;
     }
 }

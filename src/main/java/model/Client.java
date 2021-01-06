@@ -1,4 +1,4 @@
-package AuthorizationClasses;
+package model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,10 +16,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "clientCardNumber=" + clientCardNumber +
-                ", pin=" + pin +
-                ", balance=" + balance +
-                '}';
+        return clientCardNumber+" " + pin+" " +balance;
     }
 }
