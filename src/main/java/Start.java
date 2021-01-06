@@ -4,7 +4,8 @@ public class Start {
     public static void main(String [] args){
         Scanner scanner=new Scanner(System.in);
         int choise;
-        long cardNumber;
+        long cardNumber,validcardNumber;
+        int pin,validPin;
         while(true){
             System.out.println("For Client enter emulation ,Please Enter -1");
             System.out.println("For Worker enter emulation ,Please Enter -2");
@@ -15,9 +16,10 @@ public class Start {
                 case 1 -> {
                     System.out.println("Please enter valid card number :");
                     cardNumber = scanner.nextLong();
-                    AuthorizationClasses.InsertCardForm.validCard(cardNumber);
-                    long validcardNumber=AuthorizationClasses.InsertCardForm.validCard(cardNumber);
-                    System.out.println(validcardNumber);
+                    validcardNumber=AuthorizationClasses.InsertCardForm.validCard(cardNumber);
+                    System.out.println("Please enter valid PIN number :");
+                    pin = scanner.nextInt();
+                    validPin=AuthorizationClasses.EnterPinForm.validPin(pin);
                 }
                 case 2 -> System.out.println("Please enter valid worker login :");
                 case 3 -> System.exit(0);
