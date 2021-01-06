@@ -23,8 +23,8 @@ public class WriteObjects  {
         }
     }
     public static void writeTestClients() {
-         Client[] clients={new Client(123456, 1111,46464646),
-                 new Client(444433, 2222,65456454)};
+         Client[] clients={new Client(1111111111111111L, 1111,46464646),
+                 new Client(2222222222222222L, 2222,65456454)};
         FileOutputStream fos;
         ObjectOutputStream oos;
         {

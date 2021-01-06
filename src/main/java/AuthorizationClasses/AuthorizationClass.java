@@ -1,6 +1,7 @@
 package AuthorizationClasses;
-
-import java.io.File;
+import model.ReadObjects;
+import model.Worker;
+import java.util.List;
 import java.util.Scanner;
 
 public class AuthorizationClass {
@@ -24,6 +25,8 @@ public class AuthorizationClass {
                     System.out.println("Please enter valid PIN number :");
                     pin = scanner.nextInt();
                     validPin = AuthorizationClasses.EnterPinForm.validPin(pin);
+
+
                 }
                 case 2 -> {
                     System.out.println("Please enter valid worker login :");
@@ -34,6 +37,15 @@ public class AuthorizationClass {
                     Scanner passwordObj = new Scanner(System.in);
                     password = loginObj.nextLine();
                     validPassword = AuthorizationClasses.EnterPasswordForm.validPassword(password);
+                    List<Worker> workers= ReadObjects.readTestWorkers();
+                    System.out.println(workers);
+                    for(int i=0;i<workers.size();i++){
+                    String dataCheck=validLogin+" "+validPassword;
+                    if(dataCheck.equals(workers.get(i))){
+                    System.out.println("Checked");
+                    boolean alarmstartus=AuthorizationClasses.AlarmOnOff.off(true);
+                    }
+                    }
                 }
                 case 3 -> System.exit(0);
                 default -> System.out.println("Wrong entry !!!");
