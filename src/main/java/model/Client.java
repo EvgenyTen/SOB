@@ -2,9 +2,12 @@ package model;
 
 import lombok.Getter;
 import lombok.Setter;
+
+import java.io.Serializable;
+
 @Setter
 @Getter
-public class Client {
+public class Client implements Serializable {
     long clientCardNumber;
     int pin,balance;
 
