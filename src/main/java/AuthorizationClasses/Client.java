@@ -13,4 +13,13 @@ public class Client {
         this.pin = pin;
         this.balance = balance;
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "clientCardNumber=" + clientCardNumber +
+                ", pin=" + pin +
+                ", balance=" + balance +
+                '}';
+    }
 }

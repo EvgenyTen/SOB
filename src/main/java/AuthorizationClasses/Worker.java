@@ -12,4 +12,12 @@ public class Worker {
         this.workerLogin = workerLogin;
         this.workerPassword = workerPassword;
     }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "workerLogin='" + workerLogin + '\'' +
+                ", workerPassword='" + workerPassword + '\'' +
+                '}';
+    }
 }
