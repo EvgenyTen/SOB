@@ -15,7 +15,9 @@ public class Start {
                 case 1 -> {
                     System.out.println("Please enter valid card number :");
                     cardNumber = scanner.nextLong();
+                    AuthorizationClasses.InsertCardForm.validCard(cardNumber);
                     long validcardNumber=AuthorizationClasses.InsertCardForm.validCard(cardNumber);
+                    System.out.println(validcardNumber);
                 }
                 case 2 -> System.out.println("Please enter valid worker login :");
                 case 3 -> System.exit(0);
